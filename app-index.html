@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Engage Digital Demo App" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1"
+    />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta id="theme-color" name="theme-color" content="#ffffff" />
+
+    <base target="_blank" />
+
+    <title>tutorIA</title>
+
+    <link rel="stylesheet" href="app-css.css" />
+
+    <link rel="stylesheet" href="./nav.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <nav>
+      <div>
+        <input
+          id="responsive-menu"
+          type="checkbox"
+          
+        />
+  
+        <label for="responsive-menu">
+        Tutor IA
+          <span id="menu-icon"></span>
+        </label>
+        <div id="overlay"></div>
+        <ul>
+          <li>
+            <a href="/ask" onClick={handleToggleCheckbox}>
+              ASK A QUESTION
+            </a>
+          </li>
+          <li>
+            <a href="/record" onClick={handleToggleCheckbox}>
+              RECORD
+            </a>
+          </li>
+          <a>
+            <a href="/studymaterial" onClick={handleToggleCheckbox}>
+              CONSULT STUDY MATERIAL
+            </a>
+          </>
+        </ul>
+        <!-- <ul id="social-media">
+          <li>
+            <a href="http://codepen.io/erinesullivan/">
+              <i className="fab fa-codepen"></i>
+              <span className="screen-reader-text">CodePen</span>
+            </a>
+          </li>
+        </ul> -->
+      </div>
+    </nav>
+   
+ 
+<main>
+  <div class="callButton">
+    <button id="engage-digital-click-to-call-btn" class="custom-btn btn-15"></button>
+  </div>
+
+    <div class="remoteAudio">
+      <div class="logoIcon">
+        <img
+          id="initial"
+          class="logo"
+          style="
+            visibility: hidden;
+            display: none;
+            justify-content: center;
+          "
+          src="./icons8-phonelink-ring-100.png"
+          alt="Call Logo"
+          width="100"
+          height="100"
+        />
+        <img
+          id="Ringing"
+          style="visibility: hidden; display: none"
+          src="./icons8-phonelink-ring.gif"
+          alt="CalLRinging"
+          width="100"
+          height="100"
+        />
+        <img
+          id="Connected"
+          style="visibility: hidden; display: none"
+          src="./icons8-phonelink-ring.gif"
+          alt="CallConnected"
+          width="100"
+          height="100"
+        />
+      </div>
+      <audio
+        id="engage-digital-remote-audio"
+        autoplay        
+      ></audio>
+      <!-- <div class="alert" id="engage-digital-alert">
+        
+      </div> -->
+      <div class="response">Regarding the use of disability services in college, the study mentions that disability services personnel are present at every college that receives federal funding, but they do not seek out students who need help. Instead, they wait for students to self-disclose their disabilities and support needs.</div>
+    </div>
+
+  
+</div>
+
+
+</main>
+
+<footer>
+  <p>Todos los derechos reservados a CG Soluciones y TADHACK Colombia 2023</p>
+</footer>
+
+
+
+
+
+    <!-- <script>
+      function obtenerDatos() {
+            // URL de la API que deseas consumir
+            const apiUrl = 'https://jsonplaceholder.typicode.com/users';
+
+            // Realizar la solicitud a la API utilizando fetch()
+            fetch(apiUrl)
+                .then(response => {
+                    // Verificar si la respuesta es exitosa
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! Código: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    // Procesar y mostrar los datos en la página
+                    const datosDiv = document.getElementById('datos');
+                    datosDiv.innerHTML = JSON.stringify(data, null, 2);
+                })
+                .catch(error => {
+                    console.error('Error al obtener datos:', error);
+                });
+        }
+    </script> -->
+    <!-- If you want a specific version of engageDigital.js, you can give the url here.
+    If not given the latest sdk will be automatically downloaded from the given engageDomain (attribute in engage-digital-click-to-call-config.js)
+  -->
+    <!-- script src="https://rtc.engagedigital.ai/engageDigital.js"></script -->
+    <script src="engage-digital-click-to-call-config.js"></script>
+    <script src="engage-digital-click-to-call.js"></script>
+  </body>
+</html>
